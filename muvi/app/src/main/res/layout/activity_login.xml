@@ -4,63 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:background="@color/colorPrimaryDark"
     tools:context="avans.muvi.LoginActivity">
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="25dip"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
         tools:layout_editor_absoluteY="0dp"
         tools:layout_editor_absoluteX="8dp">
 
         <!--  Username Label -->
-        <TextView android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#372c24"
-            android:text="Username"/>
 
-        <EditText android:layout_width="fill_parent"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/textView_style"
+            android:text="YOUR HOME CINEMA"
+            android:textSize="20dp"
+            android:layout_marginBottom="30dp"/>
+
+        <EditText
+
             android:id="@+id/edittextUsername"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dip"
-            android:layout_marginBottom="20dip"
+            style="@style/editText_style"
+            android:hint="Username"
             android:singleLine="true"/>
 
         <!--  Password Label -->
-        <TextView android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#372c24"
-            android:text="Password"/>
 
-        <EditText android:layout_width="fill_parent"
+        <EditText
             android:id="@+id/edittextPassword"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dip"
+            android:hint="Password"
+            style="@style/editText_style"
             android:singleLine="true"
             android:password="true"/>
 
         <!-- Login button -->
         <Button
             android:id="@+id/btnLogin"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:height="60dip"
-            android:layout_marginTop="130dip"
-            android:text="Login"/>
+            style="@style/button_style"
+            android:text="Login"
+            />
 
         <!-- Link to Registration Screen -->
-        <TextView android:id="@+id/link_to_register"
-            android:layout_width="fill_parent"
-
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dip"
-            android:layout_marginBottom="40dip"
+        <TextView
+            android:id="@+id/link_to_register"
+            style="@style/textView_style"
+            android:layout_marginBottom="60dp"
             android:text="Nog geen account? Registreer hier!"
-            android:gravity="center"
-            android:textSize="20dip"
-            android:textColor="#a6b4b9"/>
+            android:textSize="15dp"
+            />
 
         <TextView
             android:visibility="gone"
