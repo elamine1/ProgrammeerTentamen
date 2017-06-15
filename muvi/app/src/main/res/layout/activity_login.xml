@@ -23,22 +23,31 @@
         <!--  Username Label -->
 
         <ImageView
+            android:scaleY="0"
+            android:scaleX="0"
+            android:alpha="0"
+            android:padding="40dp"
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
 
-            app:srcCompat="@drawable/logo" />
+            app:srcCompat="@drawable/logob" />
 
         <TextView
             android:id="@+id/textView"
             style="@style/textView_style"
+            android:alpha="0"
+            android:scaleX="0"
+            android:scaleY="0"
             android:text="YOUR HOME CINEMA"
             android:textSize="20dp"
             android:layout_marginBottom="30dp"/>
 
         <EditText
-
+            android:alpha="0"
+            android:scaleX="0"
+            android:scaleY="0"
             android:id="@+id/edittextUsername"
             style="@style/editText_style"
             android:hint="Username"
@@ -47,6 +56,9 @@
         <!--  Password Label -->
 
         <EditText
+            android:alpha="0"
+            android:scaleX="0"
+            android:scaleY="0"
             android:id="@+id/edittextPassword"
             android:hint="Password"
             style="@style/editText_style"
@@ -55,6 +67,9 @@
 
         <!-- Login button -->
         <Button
+            android:alpha="0"
+            android:scaleX="0"
+            android:scaleY="0"
             android:id="@+id/btnLogin"
             style="@style/button_style"
             android:text="Login"
@@ -62,6 +77,7 @@
 
         <!-- Link to Registration Screen -->
         <TextView
+            android:translationY="200dp"
             android:id="@+id/link_to_register"
             style="@style/textView_style"
             android:layout_marginBottom="60dp"

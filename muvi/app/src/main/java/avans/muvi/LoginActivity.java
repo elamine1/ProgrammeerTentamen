@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,7 +42,52 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        editTextUsername = (EditText) findViewById(R.id.edittextUsername);
+
+        ImageView logo = (ImageView) findViewById(R.id.imageView);
+        logo.animate()
+                .setDuration(1000)
+                .scaleX(1)
+                .scaleY(1)
+                .alpha(1);
+
+        TextView txtview2 =(TextView)findViewById(R.id.textView);
+        txtview2.animate()
+                .setStartDelay(1050)
+                .setDuration(500)
+                .scaleY(1)
+                .scaleX(1)
+                .alpha(1);
+
+
+        EditText editTextUsername2 = (EditText) findViewById(R.id.edittextUsername);
+        editTextUsername2.animate()
+                .setStartDelay(2100)
+                .setDuration(800)
+                .scaleY(1)
+                .scaleX(1)
+                .alpha(1);
+
+        EditText editTextPassword2 = (EditText) findViewById(R.id.edittextPassword);
+        editTextPassword2.animate()
+                .setStartDelay(2200)
+                .setDuration(800)
+                .scaleY(1)
+                .scaleX(1)
+                .alpha(1);
+
+        Button btn = (Button) findViewById(R.id.btnLogin);
+        btn.animate()
+                .setStartDelay(2900)
+                .setDuration(600)
+                .scaleY(1)
+                .scaleX(1)
+                .alpha(1);
+
+        TextView txtview =(TextView)findViewById(R.id.link_to_register);
+        txtview.animate()
+                .setStartDelay(3600)
+        .translationY(0);
+
         editTextPassword = (EditText) findViewById(R.id.edittextPassword);
         txtLoginErrorMsg = (TextView) findViewById(R.id.txtLoginErrorMessage);
         btnLogin = (Button) findViewById(R.id.btnLogin);
