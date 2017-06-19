@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:background="@color/colorPrimaryDark"
+    tools:context="avans.muuvi.presentation.LoginActivity">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <!--  Username Label -->
+
+        <ImageView
+            android:scaleY="0"
+            android:scaleX="0"
+            android:alpha="0"
+            android:padding="40dp"
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+
+            app:srcCompat="@drawable/logob" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/textView_style"
+            android:alpha="0"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:text="YOUR HOME CINEMA"
+            android:textSize="20dp"
+            android:layout_marginBottom="30dp"/>
+
+        <EditText
+            android:alpha="0"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:id="@+id/edittextUsername"
+            style="@style/editText_style"
+            android:hint="Username"
+            android:singleLine="true"/>
+
+        <!--  Password Label -->
+
+        <EditText
+            android:alpha="0"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:id="@+id/edittextPassword"
+            android:hint="Password"
+            style="@style/editText_style"
+            android:singleLine="true"
+            android:password="true"/>
+
+        <!-- Login button -->
+        <Button
+            android:alpha="0"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:id="@+id/btnLogin"
+            style="@style/button_style"
+            android:text="Login"
+            />
+
+        <!-- Link to Registration Screen -->
+        <TextView
+            android:translationY="200dp"
+            android:id="@+id/link_to_register"
+            style="@style/textView_style"
+            android:layout_marginBottom="60dp"
+            android:text="Nog geen account? Registreer hier!"
+            android:textSize="15dp"
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/txtLoginErrorMessage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#e61c15"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
