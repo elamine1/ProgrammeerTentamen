@@ -1,9 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context="avans.muuvi.DetailActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="avans.muuvi.DetailActivity">
+    android:orientation="horizontal"
+    android:background="@color/colorPrimaryDark"    >
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="9"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        ></LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rowFilmTitle2"
+        android:padding="10dp"
+        android:text="Film Title"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="Film Description"
+        android:padding="10dp"
+        android:textColor="@android:color/white"
+        android:id="@+id/rowFilmDescription2"
+
+        />
+    
+</LinearLayout>

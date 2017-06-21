@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="100dp">
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_weight="9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
         android:orientation="vertical">
 
     <TextView
@@ -16,6 +19,9 @@
         android:textSize="20dp"
         android:padding="10dp"
         android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textAlignment="center"
+        android:background="@color/colorDarker"
         android:id="@+id/rowFilmTitle"/>
 
     <TextView
@@ -24,6 +30,7 @@
         android:textSize="16dp"
         android:text="Film Description"
         android:padding="10dp"
+        android:textColor="@android:color/white"
         android:id="@+id/rowFilmDescription"/>
 
     </LinearLayout>

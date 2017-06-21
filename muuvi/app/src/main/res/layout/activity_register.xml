@@ -9,7 +9,7 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:background="@color/colorPrimaryDark"
-    tools:context="avans.muuvi.presentation.LoginActivity">
+    tools:context="avans.muuvi.presentation.RegisterActivity">
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -23,9 +23,9 @@
         <!--  Username Label -->
 
         <ImageView
-            android:scaleY="0"
-            android:scaleX="0"
-            android:alpha="0"
+            android:scaleY="2"
+            android:scaleX="2"
+            android:alpha="2"
             android:padding="40dp"
             android:id="@+id/imageView"
             android:layout_width="match_parent"
@@ -34,54 +34,64 @@
 
             app:srcCompat="@drawable/logob" />
 
+
         <TextView
-            android:id="@+id/textViewLogin"
+            android:id="@+id/textViewRegister"
             style="@style/textView_style"
             android:alpha="0"
             android:scaleX="0"
             android:scaleY="0"
-            android:text="Your home cinema"
+            android:text="Don't be afraid to join us, we are a nice community :)"
             android:textSize="20dp"
             android:layout_marginBottom="30dp"/>
 
+        <!-- Hier komt de voornaam -->
         <EditText
             android:alpha="0"
             android:scaleX="0"
             android:scaleY="0"
-            android:id="@+id/edittextUsername"
+            android:id="@+id/edittextfirstname"
+            style="@style/editText_style"
+            android:hint="Firstname"
+            android:singleLine="true"/>
+
+        <!-- hier komt de achternaam -->
+        <EditText
+            android:alpha="0"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:id="@+id/edittextlastname"
+            android:hint="Lastname"
+            style="@style/editText_style"
+            android:singleLine="true"/>
+
+        <!-- hier komt de gebruikersnaam -->
+        <EditText
+            android:alpha="0"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:id="@+id/edittextusernameregister"
             style="@style/editText_style"
             android:hint="Username"
             android:singleLine="true"/>
 
-        <!--  Password Label -->
-
+        <!-- hier komt het wachtwoord -->
         <EditText
             android:alpha="0"
             android:scaleX="0"
             android:scaleY="0"
-            android:id="@+id/edittextPassword"
+            android:id="@+id/edittextpasswordregister"
             android:hint="Password"
             style="@style/editText_style"
             android:singleLine="true"
             android:password="true"/>
 
-        <!-- Login button -->
+        <!-- hier komt de register button  -->
         <Button
             android:alpha="0"
             android:scaleX="0"
             android:scaleY="0"
-            android:id="@+id/btnLogin"
-            style="@style/button_style"
-            android:text="Login"
-            />
-
-        <!-- Link to Registration Screen -->
-
-        <Button
-            android:alpha="0"
-            android:scaleX="0"
-            android:scaleY="0"
-            android:id="@+id/regbtn"
+            android:id="@+id/btnregister"
             style="@style/button_style"
             android:text="Sign Up"
             />
@@ -95,5 +105,4 @@
 
     </LinearLayout>
 
-
-</LinearLayout>
+    </LinearLayout>

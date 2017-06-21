@@ -39,16 +39,24 @@ import avans.muuvi.service.VolleyRequestQueue;
 
 import static avans.muuvi.R.id.btnLogin;
 
-public class LoginActivity extends AppCompatActivity {
 
-    private EditText editTextUsername;
-    private EditText editTextPassword;
+
+public class RegisterActivity extends AppCompatActivity {
+
+    private EditText editTextFirstName;
+    private EditText editTextLastName;
+    private EditText editTextUsernameRegister;
+    private EditText editTextPasswordRegister;
+
     private TextView txtLoginErrorMsg;
-    private TextView textViewLogin;
-    private Button regbtn;
-    private Button btnLogin;
-    private String mUsername;
-    private String mPassword;
+    private TextView textViewRegister;
+
+    private Button btnRegister;
+
+    private String FirstName;
+    private String LastName;
+    private String RegisterUserName;
+    private String RegisterPassword;
 
 
     public final String TAG = this.getClass().getSimpleName();
@@ -59,14 +67,15 @@ public class LoginActivity extends AppCompatActivity {
         // requestWindowFeature(Window.FEATURE_NO_TITLE);
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
         //      WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_register);
 
-        editTextUsername = (EditText) findViewById(R.id.edittextUsername);
-        editTextPassword = (EditText) findViewById(R.id.edittextPassword);
+        editTextFirstName = (EditText) findViewById(R.id.edittextfirstname);
+        editTextLastName = (EditText) findViewById(R.id.edittextlastname);
+        editTextUsernameRegister = (EditText) findViewById(R.id.edittextusernameregister);
+        editTextPasswordRegister = (EditText) findViewById(R.id.edittextpasswordregister);
+
         txtLoginErrorMsg = (TextView) findViewById(R.id.txtLoginErrorMessage);
-        textViewLogin = (TextView) findViewById(R.id.textViewLogin);
-        btnLogin = (Button) findViewById(R.id.btnLogin);
-        regbtn = (Button) findViewById(R.id.regbtn);
+        textViewRegister = (TextView) findViewById(R.id.textViewRegister);
 
         ImageView logo = (ImageView) findViewById(R.id.imageView);
         logo.animate()
@@ -75,102 +84,95 @@ public class LoginActivity extends AppCompatActivity {
                 .scaleY(1)
                 .alpha(1);
 
-        TextView textView = (TextView) findViewById(R.id.textViewLogin);
-        textView.animate()
-                .setStartDelay(880)
+        TextView textViewRegister =(TextView)findViewById(R.id.textViewRegister);
+        textViewRegister.animate()
+                .setStartDelay(870)
+                .setDuration(500)
+                .scaleY(1)
+                .scaleX(1)
+                .alpha(1);
+
+
+        EditText editTextFirstName2 = (EditText) findViewById(R.id.edittextfirstname);
+        editTextFirstName2.animate()
+                .setStartDelay(2100)
+                .setDuration(950)
+                .scaleY(1)
+                .scaleX(1)
+                .alpha(1);
+
+        EditText editTextLastName2 = (EditText) findViewById(R.id.edittextlastname);
+        editTextLastName2.animate()
+                .setStartDelay(2100)
+                .setDuration(950)
+                .scaleY(1)
+                .scaleX(1)
+                .alpha(1);
+
+        EditText editTextUsernameRegister2 = (EditText) findViewById(R.id.edittextusernameregister);
+        editTextUsernameRegister2.animate()
+                .setStartDelay(2100)
+                .setDuration(950)
+                .scaleY(1)
+                .scaleX(1)
+                .alpha(1);
+
+        EditText editTextPasswordRegister2 = (EditText) findViewById(R.id.edittextpasswordregister);
+        editTextPasswordRegister2.animate()
+                .setStartDelay(2100)
+                .setDuration(950)
+                .scaleY(1)
+                .scaleX(1)
+                .alpha(1);
+
+        btnRegister = (Button) findViewById(R.id.btnregister);
+        btnRegister.animate()
+                .setStartDelay(3300)
                 .setDuration(600)
                 .scaleY(1)
                 .scaleX(1)
                 .alpha(1);
 
 
-        EditText editTextUsername2 = (EditText) findViewById(R.id.edittextUsername);
-        editTextUsername2.animate()
-                .setStartDelay(1650)
-                .setDuration(950)
-                .scaleY(1)
-                .scaleX(1)
-                .alpha(1);
-
-        EditText editTextPassword2 = (EditText) findViewById(R.id.edittextPassword);
-        editTextPassword2.animate()
-                .setStartDelay(1650)
-                .setDuration(950)
-                .scaleY(1)
-                .scaleX(1)
-                .alpha(1);
-
-        Button btn = (Button) findViewById(R.id.btnLogin);
-        btn.animate()
-                .setStartDelay(3100)
-                .setDuration(500)
-                .scaleY(1)
-                .scaleX(1)
-                .alpha(1);
-
-        Button regbtn = (Button) findViewById(R.id.regbtn);
-        regbtn.animate()
-                .setStartDelay(3650)
-                .setDuration(500)
-                .scaleY(1)
-                .scaleX(1)
-                .alpha(1);
-
-        btnLogin.setOnClickListener(new View.OnClickListener() {
+        btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mUsername = editTextUsername.getText().toString();
-                mPassword = editTextPassword.getText().toString();
+                FirstName = editTextFirstName.getText().toString();
+                LastName = editTextLastName.getText().toString();
+                RegisterUserName = editTextUsernameRegister.getText().toString();
+                RegisterPassword = editTextPasswordRegister.getText().toString();
                 txtLoginErrorMsg.setText("");
 
                 // TODO Checken of username en password niet leeg zijn
                 // momenteel checken we nog niet
 
-                handleLogin(mUsername, mPassword);
+                handleRegister(FirstName, LastName, RegisterUserName, RegisterPassword );
             }
         });
-
-        regbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        /*
-        @Override
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            Log.i(TAG, "Position " + position + " is geselecteerd");
-
-            Film film = films.get(position);
-            Intent intent = new Intent(getApplicationContext(), DetailActivity.class);
-            intent.putExtra(FILM_DATA, film);
-            startActivity(intent);
-        }
-        */
 
 
     }
 
-    private void handleLogin(String username, String password) {
+
+
+    private void handleRegister(String firstname, String lastname, String username, String password) {
         //
         // Maak een JSON object met username en password. Dit object sturen we mee
         // als request body (zoals je ook met Postman hebt gedaan)
         //
-        String body = "{\"username\":\"" + username + "\",\"password\":\"" + password + "\"}";
-        Log.i(TAG, "handleLogin - body = " + body);
+        String body = "{\"firstName\":\"" + firstname + "\", \"lastName\":\"" + lastname + "\" , \"username\":\"" + username + "\",\"password\":\"" + password + "\"}";
+        Log.i(TAG, "handleRegister - body = " + body);
 
         try {
             JSONObject jsonBody = new JSONObject(body);
             JsonObjectRequest jsObjRequest = new JsonObjectRequest
-                    (Request.Method.POST, Config.URL_LOGIN, jsonBody, new Response.Listener<JSONObject>() {
+                    (Request.Method.POST, Config.URL_REGISTER, jsonBody, new Response.Listener<JSONObject>() {
 
                         @Override
                         public void onResponse(JSONObject response) {
                             // Succesvol response - dat betekent dat we een geldig token hebben.
-                            txtLoginErrorMsg.setText("Response: " + response.toString());
-                            displayMessage("Succesvol ingelogd!");
+                             txtLoginErrorMsg.setText("Response: " + response.toString());
+                            displayMessage("Succesvol een account aangemaakt.");
 
                             // We hebben nu het token. We kiezen er hier voor om
                             // het token in SharedPreferences op te slaan. Op die manier
@@ -187,7 +189,7 @@ public class LoginActivity extends AppCompatActivity {
                                 editor.commit();
 
                                 // Start the main activity, and close the login activity
-                                Intent main = new Intent(getApplicationContext(), MainActivity.class);
+                                Intent main = new Intent(getApplicationContext(), LoginActivity.class);
                                 startActivity(main);
                                 // Close the current activity
                                 finish();
@@ -218,6 +220,7 @@ public class LoginActivity extends AppCompatActivity {
         }
         return;
     }
+
 
     /**
      * Handel Volley errors op de juiste manier af.
@@ -267,3 +270,4 @@ public class LoginActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), toastString, Toast.LENGTH_LONG).show();
     }
 }
+

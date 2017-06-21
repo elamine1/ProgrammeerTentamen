@@ -8,9 +8,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-/**
- * Created by Daniel on 18-6-2017.
- */
 
 public class FilmMapper {
     // De JSON attributen die we uitlezen
